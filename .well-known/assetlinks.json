@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.lylm83.mia",
+      "sha256_cert_fingerprints": [
+        "F8:BA:B5:B7:37:21:63:1E:BD:80:87:96:ED:28:17:CF:E4:81:AE:65:79:60:F1:CB:AE:CD:9F:FE:3F:BB:D2:F1",
+        "F2:47:8C:EF:45:5A:4A:8F:73:B6:2B:1C:A7:F2:D9:E3:B1:F3:4B:26:22:1C:4A:9A:78:95:D0:DB:91:DA:28:D5"
+      ]
+    }
+  }
+]
