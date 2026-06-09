@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiA — Connexion OpenRouter</title>
+</head>
+<body style="font-family:sans-serif;text-align:center;padding:2rem;color:#222">
+  <h2>Connexion OpenRouter réussie ✓</h2>
+  <p>Retour à l'application MiA…</p>
+  <p><a id="back" href="#" style="display:inline-block;margin-top:1rem;padding:.8rem 1.4rem;background:#4f46e5;color:#fff;border-radius:8px;text-decoration:none">Ouvrir MiA</a></p>
+  <script>
+    // Si l'App Link a été vérifié, Android ouvre MiA AVANT de charger cette page
+    // (on n'arrive jamais ici). Sinon (lien non vérifié), on tente le scheme
+    // custom mia:// — d'abord automatiquement, puis via le bouton (geste) en secours.
+    var code = new URLSearchParams(location.search).get('code') || '';
+    var deep = 'mia://openrouter-callback?code=' + encodeURIComponent(code);
+    document.getElementById('back').href = deep;
+    setTimeout(function () { location.href = deep; }, 400);
+  </script>
+</body>
+</html>
